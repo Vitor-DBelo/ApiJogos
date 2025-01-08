@@ -1,9 +1,10 @@
-import express,{Request,Response} from "express"
+//import express,{Request,Response} from "express"
+import createApp from "./app";
 
-const app = express()
+const app = createApp()
+const port = process.env.PORT;
 
-app.get('/' ,(req: Request, res: Response) => {
-    console.log('fala pai');
+
+app.listen(port, ()=>{
+    console.log('server run http://localhost:' + port)
 });
-
-app.listen(5557)
