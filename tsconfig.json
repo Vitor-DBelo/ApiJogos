@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                          // Define o alvo da compilação para ES6 (ECMAScript 2015), garantindo compatibilidade com a maioria dos navegadores modernos e funcionalidades como classes e promessas.
+    "module": "CommonJS",                          // Usa módulos ES6 para importação/exportação. Permite usar `import` e `export` nativamente, ideal para projetos modernos com módulos ES.
+    "outDir": "./dist",                       // Define a pasta de saída para os arquivos JavaScript compilados. No caso, os arquivos serão colocados na pasta `dist`.
+    "strict": true,                           // Habilita todas as checagens rigorosas de tipo, garantindo maior segurança e menos erros. Ativa várias opções como `noImplicitAny` e `strictNullChecks`.
+    "esModuleInterop": true,                  // Permite a importação de módulos CommonJS (como `require`) de forma simplificada, usando a sintaxe de módulos ES6 (`import`). Garante compatibilidade com módulos que não são ES6 nativos.
+    "noUnusedLocals": true,                   // Marca como erro variáveis locais que são declaradas mas nunca usadas. Ajuda a manter o código limpo e sem código morto.
+  }
+}
