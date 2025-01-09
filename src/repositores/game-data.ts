@@ -1,6 +1,8 @@
-{
-    "games": [
-      {
+import { GameModel } from "../contracts/game-model";
+
+
+export const database: GameModel[] = [
+    {
         "id": 1,
         "name": "Black Myth: Wukong",
         "minimum_age": 16,
@@ -358,7 +360,5 @@
           "total_dlc": 2,
           "dlc_names": ["Demon Slayer - Hinokami Chronicles - Additional Character Pack", "Demon Slayer - Hinokami Chronicles - Story DLC"]
         }
-      }  
-    ]
-  }
-  
+      }
+];
