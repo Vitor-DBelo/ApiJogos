@@ -1,4 +1,4 @@
-import { GameModel } from "../contracts/game-model";
+import { DLC, GameModel } from "../contracts/game-model";
 import { database } from "./game-data";
 
 
@@ -14,3 +14,25 @@ export const findAllGameById = async (id: number): Promise<GameModel | undefined
 export const insertGame = async (game: GameModel) => {
     database.push(game)
 };
+
+export const deleteOneGame = async (id: number) => {
+    const index = database.findIndex(game => game.id === id);
+
+    if(index !== -1){
+        database.splice(index, 1);
+        return true;
+    }
+
+    return false;
+};
+
+
+export const updateGameById = async (id: number, dlc: DLC):Promise<GameModel>=> {
+    const gameIndex = database.findIndex(game => game.id === id);
+
+    if(gameIndex !== -1){
+        database[gameIndex].dlc = dlc;
+    }
+
+    return database[gameIndex]
+}
