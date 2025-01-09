@@ -13,3 +13,17 @@ export const noContent = async ():Promise<HttpResponse>=>{
         body: null,
     }
 };
+
+export const badRequest = async ():Promise<HttpResponse> => {
+    return{
+        StatusCode: 400,
+        body: null,
+    }
+}
+
+export const created = async ():Promise<HttpResponse> =>{
+    return{
+        StatusCode: 201,
+        body: {mesage: 'successFul' },
+    }
+};
