@@ -1,7 +1,7 @@
 import {Request,Response} from "express"
 import * as services from "../services/game-services";
 import * as httpHellp  from "../utils/http-hellp";
-import { DLC } from "../contracts/game-model";
+import { DLC} from "../contracts/game-model";
 
 
 export const getGame = async (req: Request, res: Response) => {
@@ -39,4 +39,18 @@ export const updateGame = async (req:Request, res:Response) =>{
     const bodyValue:DLC = req.body;
     const httpResponse = await services.updateGameServeces(id, bodyValue);
     res.status(httpResponse.StatusCode).json(httpResponse.body);
+};
+
+export const listDetail = async (req: Request, res: Response) => {
+    const id = parseInt(req.params.id);
+    const response = await services.getDetail(id);
+    
+    const httpResponse = typeof response === 'function' ? await response() : response;
+    
+    if (httpResponse) {
+        res.status(httpResponse.StatusCode).json(httpResponse.body);
+    } else {
+        const errorResponse = await httpHellp.badRequest();
+        res.status(errorResponse.StatusCode).json(errorResponse.body);
+    }
 };

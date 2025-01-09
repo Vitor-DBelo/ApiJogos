@@ -36,3 +36,14 @@ export const updateGameById = async (id: number, dlc: DLC):Promise<GameModel>=> 
 
     return database[gameIndex]
 }
+
+export const getGameDetailList = async (id:number) => {
+    const game = database.find(game => game.id === id);
+    if (game){
+        return{
+            minimum_recommendations: game.minimum_recommendations,
+            maximum_recommendations: game.maximum_recommendations
+        }
+    }
+    return null
+}

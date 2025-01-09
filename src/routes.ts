@@ -9,7 +9,7 @@ router.get('/game/:id', GameController.getGameById);
 router.post('/game', GameController.postGame);
 router.delete('/game/delete/:id', GameController.deleteGame);
 
-router.patch('/game/atuaz/:id', GameController.updateGame)
+router.patch('/game/atuaz/:id', GameController.updateGame);
+router.get('/game/Detail/:id', GameController.listDetail);
 
 export default  router;
-

@@ -66,3 +66,16 @@ export const updateGameServeces = async (id: number, dlc: DLC) => {
 
     return response;
 };
+
+export const getDetail = async (id:number,)=>{
+    const data = await gameRepo.getGameDetailList(id);
+    let response = null
+
+    if(data){
+        response = HttpMethod.ok(data);
+    }else{
+        response = HttpMethod.noContent;
+    }
+
+    return response;
+}
