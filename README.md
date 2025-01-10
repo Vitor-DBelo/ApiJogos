@@ -69,15 +69,3 @@ Remove um jogo do sistema pelo ID.
 $ git clone https://github.com/usuario/repo.git
 ```
 
-Clique no botão abaixo para copiar o comando:
-
-<div style="display: flex; align-items: center; background-color: #2F3136; padding: 16px; border-radius: 6px;">
-  <code>$ git clone https://github.com/usuario/repo.git</code>
-  <button onclick="navigator.clipboard.writeText('git clone https://github.com/usuario/repo.git')" style="margin-left: 16px; background: none; border: none; cursor: pointer;">
-    <img width="20" src="https://img.icons8.com/material-outlined/24/000000/copy.png" alt="copy icon">
-  </button>
-</div>
-
----
-
-> **Nota:** Para qualquer dúvida ou contribuição, entre em contato pelo repositório oficial.
