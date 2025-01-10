@@ -70,6 +70,6 @@ Remove um jogo do sistema pelo ID.
 ## 🖥️ Como Clonar o Projeto
 
 ```bash
-$ git clone https://github.com/usuario/repo.git
+$ git clone https://github.com/Vitor-DBelo/ApiJogos.git
 ```
 
