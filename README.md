@@ -46,7 +46,9 @@ src/
 
 <p align="center">Exemplo de Requisições usando Thunder Client:</p>
 <div align="center" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+ <div>
   <img src="./doc/Req-methods.PNG" alt="Endpoints da API" style="width: 300px;">
+ </div>
   <div>
     <p style="margin: 15px 5px; text-align: left;"><strong>GET</strong> <code>/api/game</code><br>
       Recupera todos os jogos.</p>
